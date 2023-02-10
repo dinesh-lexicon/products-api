@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: getProducts
+baseUri: https://localhost:8081/products
+/products:
+  get:
+    description: get products
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "productId":"1234",
+                "productName":"Apple-kasmir",
+                "productDesc":"fruits product",
+                "productDate":"01-02-2023"
+              }
