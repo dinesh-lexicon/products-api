@@ -83,6 +83,26 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.4.0</muleVersion>
+						<username>dinesh0223</username>
+						<password>Dinesh0223</password>
+						<objectStoreV2>true</objectStoreV2>
+						<properties>
+							<http.port>8081</http.port>
+							<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
+							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
+						</properties>
+					</cloudHubDeployment>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
 				<artifactId>munit-maven-plugin</artifactId>
 				<version>${munit.version}</version>
@@ -102,26 +122,6 @@
 							<format>html</format>
 						</formats>
 					</coverage>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0</muleVersion>
-						<username>dinesh0223</username>
-						<password>Dinesh0223</password>
-						<objectStoreV2>true</objectStoreV2>
-						<properties>
-							<http.port>8081</http.port>
-							<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
-							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
-						</properties>
-					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
